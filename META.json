@@ -1,5 +1,5 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "Convert between dakuon/handakuon and seion for Japanese",
    "author" : [
       "Yuto KAWAMURA(kawamuray) <kawamuray.dadada@gmail.com>"
    ],
@@ -42,6 +42,7 @@
       },
       "runtime" : {
          "requires" : {
+            "Exporter" : "0",
             "perl" : "5.008005"
          }
       },
@@ -52,5 +53,16 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/kawamuray/p5-Lingua-JA-Dakuon/issues"
+      },
+      "homepage" : "https://github.com/kawamuray/p5-Lingua-JA-Dakuon",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/kawamuray/p5-Lingua-JA-Dakuon.git",
+         "web" : "https://github.com/kawamuray/p5-Lingua-JA-Dakuon"
+      }
+   },
    "version" : "0.01"
 }
