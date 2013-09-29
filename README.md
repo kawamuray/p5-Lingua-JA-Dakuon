@@ -67,6 +67,16 @@ character code even if it is avaiable.
 For example, calling dakuon() with argument 'か' will return "か\\x{3099}"
 instead of returning "\\x{304c}".
 
+## $Lingua::JA::Dakuon::AllDakuonRE
+
+Regex \*STRING\*(not compiled) that matches all dakuon character(s)
+can be passed to seion().
+
+## $Lingua::JA::Dakuon::AllHandakuonRE
+
+Regex \*STRING\*(not compiled) that matches all handakuon character(s)
+can be passed to seion().
+
 # FUNCTIONS
 
 ## dakuon($char)

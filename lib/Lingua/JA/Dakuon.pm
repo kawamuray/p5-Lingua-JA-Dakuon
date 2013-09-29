@@ -44,6 +44,9 @@ my $HandakuonRE = '[' . join('', keys %HandakuonRev) . ']';
 
 my $HankakuKatakanaRE = '[ｦ-ﾝ]';
 
+our $AllDakuonRE = "(?:$DakuonRE|.[゛\x{3099}]|$HankakuKatakanaRE\ﾞ)";
+our $AllHandakuonRE = "(?:$HandakuonRE|.[゜\x{309a}]|$HankakuKatakanaRE\ﾟ)";
+
 sub dakuon {
     my ($c) = @_;
     return if length($c) != 1; # Expected argument is a single char
@@ -187,6 +190,16 @@ If this variable set to true, use combining character instead of dakuon
 character code even if it is avaiable.
 For example, calling dakuon() with argument 'か' will return "か\x{3099}"
 instead of returning "\x{304c}".
+
+=head2 $Lingua::JA::Dakuon::AllDakuonRE
+
+Regex *STRING*(not compiled) that matches all dakuon character(s)
+can be passed to seion().
+
+=head2 $Lingua::JA::Dakuon::AllHandakuonRE
+
+Regex *STRING*(not compiled) that matches all handakuon character(s)
+can be passed to seion().
 
 =head1 FUNCTIONS
 
