@@ -148,10 +148,12 @@ Lingua::JA::Dakuon - Convert between dakuon/handakuon and seion for Japanese
 
     # Convert char to seion
     seion('が');         #=> 'か'(\x{304b})
+    seion('か゛');       #=> 'か'(\x{304b})
     seion('あ');         #=> 'あ'(\x{3042})
     seion("あ\x{3099}"); #=> 'あ'(\x{3042})
     seion('ﾀﾞ');         #=> 'ﾀ' (\x{ff80})
     seion('ぱ');         #=> 'は'(\x{306f})
+    seion('は゜');       #=> 'は'(\x{306f})
     seion('ﾀﾟ');         #=> 'ﾀ' (\x{ff80})
 
     # Normalize dakuon/handakuon expression in string
