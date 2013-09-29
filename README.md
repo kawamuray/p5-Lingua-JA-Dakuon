@@ -99,7 +99,8 @@ Convert passed character to seion character if it is possible.
 Return undef if passed argument has more than 2 character or second
 character isn't a mark charactor which expresses dakuon/handakuon.
 
-    handakuon('は'); #=> 'ぱ'(\x{3071})
+    seion('が'); #=> 'か'(\x{304b})
+    seion('ぱ'); #=> 'は'(\x{306f})
 
 ## dakuon\_normalize($string)
 
